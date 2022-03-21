@@ -2,20 +2,20 @@
 
 ```kotlin
 class BankAccount {
-    	var balance = 0.0
-        	private set
+    var balance = 0.0
+        private set
 	
-	fun deposit(depositAccount: Double) {
-		blance += depositAccount
-	}
+    fun deposit(depositAccount: Double) {
+        blance += depositAccount
+    }
 
-	@Throws(InsfficientFunds::class)
-	fun withdraw(withdrawAmount: Double) {
-			if (blance < withdrawAmount) {
-					throw InsufficientFunds()
-			}
-			balance -= withdrawAmount
-	}
+    @Throws(InsfficientFunds::class)
+    fun withdraw(withdrawAmount: Double) {
+        if (blance < withdrawAmount) {
+            throw InsufficientFunds()
+        }
+        balance -= withdrawAmount
+    }
 }
 
 class InsfficientFunds : Exception()
@@ -39,23 +39,23 @@ println(account.blance)  // 50.0
 //멀티스레드 활용하여 프로퍼티 수정
 var num = 0
 for (i in 1..1000) {
-		thread {
-				Thread.sleep(10)
-				num += 1
-		}
+    thread {
+        Thread.sleep(10)
+        num += 1
+    }
 }
 
 //코루틴 사용하여 프로퍼티 수정
 suspend fun main() {
-		var num = 0
-		coroutineScope {
-				for (i in 1..1000) {
-						launch {
-								delay(10)
-								num += 1
-						}
-				}
-		}
+    var num = 0
+    coroutineScope {
+    for (i in 1..1000) {
+        launch {
+            delay(10)
+            num += 1
+            }
+        }
+    }
 }
 
 //멀티 스레드 경우
@@ -73,13 +73,13 @@ print(num) // 실행할 때마다 다른 숫자가 출력된다.
 val lock = Any()
 var num = 0
 for (i in 1..1000) {
-		thread {
-				Thread.sleep(10)
-				// 다른 스레드 접근 금지
-				synchronized(lock) { 
-						num += 1
-				}
-		}
+    thread {
+        Thread.sleep(10)
+        // 다른 스레드 접근 금지
+        synchronized(lock) { 
+            num += 1
+        }
+    }
 }
 
 Thread.sleep(1000)
@@ -115,12 +115,12 @@ print(list) //1,2,3,4
 var name: String = "cho"
 var surname: String = "junhyung"
 val fullName 
-		get() = "$name $surname" 
+    get() = "$name $surname" 
 
 fun main() {
-		println(fullName) //cho junhyung
-		name = "joo"
-		println(fullName) //joo junhyung
+    println(fullName) //cho junhyung
+    name = "joo"
+    println(fullName) //joo junhyung
 }
 ```
 
@@ -128,11 +128,11 @@ var은 게터와 세터를 모두 제공하지만, val은 변경이 불가능하
 
 ```kotlin
 interface Element {
-		val active: Boolean
+    val active: Boolean
 }
 
 class ActualElement: Element {
-		override var active: Boolean = false 
+    override var active: Boolean = false 
 }
 ```
 
@@ -155,9 +155,9 @@ fun main() {
         println(fullName.length) //오류
     }
 
-		if (fullName2 != null) {
-				println(fullName2.length) //9 
-		}
+    if (fullName2 != null) {
+        println(fullName2.length) //9 
+    }
      
 }
 ```
@@ -176,13 +176,13 @@ Iterable, Collection, Set, List 인터페이스는 읽기 전용이기 때문에
 
 ```kotlin
 inline fun <T,R> Iterable<T>.map(
-		transformation: (T) -> R
+    transformation: (T) -> R
 ): List<R> {
-		val list = ArrayList<R>()
-		for (elem in this) {
-				list.add(transformation(elem))
-		}
-		return list
+    val list = ArrayList<R>()
+    for (elem in this) {
+    list.add(transformation(elem))
+    }
+    return list
 }
 ```
 
@@ -197,7 +197,7 @@ val list = listOf(1,2,3)
 
 //절대 이렇게 하지 마세요!
 if (list is MutableList) {
-		list.add(4)
+    list.add(4)
 }
 ```
 
@@ -222,11 +222,11 @@ immutable 객체를 사용하면, 다음과 같은 장점이 존재합니다.
 
 ```kotlin
 class User(
-		val name: String,
-		val surname: String
+    val name: String,
+    val surname: String
 ) {
-		//새로운 객체를 생성해서 수정한 값을 가지게 해야 합니다.
-		fun withSurname(surname: String) = User(name, surname)
+    //새로운 객체를 생성해서 수정한 값을 가지게 해야 합니다.
+    fun withSurname(surname: String) = User(name, surname)
 }
 
 var user = User("jun", "hyung")
@@ -240,8 +240,8 @@ copy 메서드를 활용하면, 모든 기본 생성자 프로퍼티가 같은 �
 
 ```kotlin
 data class User(
-		val name: String,
-		val surname: String
+    val name: String,
+    val surname: String
 )
 
 var user = User("jun", "hyung")
@@ -282,7 +282,7 @@ mutable 컬렉션은 observe 할 수 있게 만드려면, 추가적인 구현이
 
 ```kotlin
 var person = listOf<Person>()
-		private set
+    private set
 ```
 
 mutable 컬렉션을 사용하는 것이 처음에는 더 간편하게 느껴지겠지만, **mutable 프로퍼티를 사용하면 객체 변경을 제어하기가 더욱 수월**합니다.
@@ -302,13 +302,13 @@ var list3 = mutableListOf<Int>()
 data class User(val name: String) 
 
 class UserRepository {
-		private val storedUsers: MutableMap<Int, String> = 
-				mutableMapOf()
+    private val storedUsers: MutableMap<Int, String> = 
+    	mutableMapOf()
 
-		fun loadAll(): MutableMap<Int, String> {
-			return storedUsers // 접근이 가능하면 안되는데 가능하다.
-		}
-		...
+    fun loadAll(): MutableMap<Int, String> {
+        return storedUsers // 접근이 가능하면 안되는데 가능하다.
+    }
+    //...
 }
 ```
 
@@ -332,13 +332,13 @@ print(userRepository.loadAll()) // {4=Kirill}
 
 ```kotlin
 class UserHodler {
-		private val user: MutableUser()
+    private val user: MutableUser()
 
-		fun get(): MutableUser {
-				**return user.copy()** 
-		}
+    fun get(): MutableUser {
+    return user.copy()
+    }
 
-		//...
+    //...
 }
 ```
 
@@ -350,11 +350,11 @@ class UserHodler {
 data class User(val name: String)
 
 class UserRepository {
-		private val storedUsers: MutableMap<Int, String> = mutableMapOf()
+    private val storedUsers: MutableMap<Int, String> = mutableMapOf()
 	
-		fun loadAll(): **Map<Int, String>** {
-				return storedUsers
-		}	
+    fun loadAll(): Map<Int, String> {
+        return storedUsers
+    }	
 }
 ```
 
