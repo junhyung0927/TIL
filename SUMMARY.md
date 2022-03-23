@@ -6,3 +6,4 @@
       * [item1](language/kotlin/effective-kotlin/item1.md)
       * [item2](language/kotlin/effective-kotlin/item2.md)
       * [item3](language/kotlin/effective-kotlin/item3.md)
+      * [item4](language/kotlin/effective-kotlin/item4.md)
