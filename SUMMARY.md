@@ -8,3 +8,4 @@
       * [item3](language/kotlin/effective-kotlin/item3.md)
       * [item4](language/kotlin/effective-kotlin/item4.md)
       * [item5](language/kotlin/effective-kotlin/item5.md)
+      * [item6](language/kotlin/effective-kotlin/item6.md)
