@@ -9,3 +9,4 @@
       * [item4](language/kotlin/effective-kotlin/item4.md)
       * [item5](language/kotlin/effective-kotlin/item5.md)
       * [item6](language/kotlin/effective-kotlin/item6.md)
+      * [item7](language/kotlin/effective-kotlin/item7.md)
