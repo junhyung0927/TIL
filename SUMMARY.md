@@ -17,3 +17,4 @@
       * [item8](language/kotlin/effective-kotlin/item8.md)
       * [item 9](language/kotlin/effective-kotlin/item-9.md)
       * [item10](language/kotlin/effective-kotlin/item10.md)
+      * [item11](readme/kotlin/effective-kotlin/item11.md)
