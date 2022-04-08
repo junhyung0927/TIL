@@ -24,3 +24,4 @@
   * [Document](android/document/README.md)
     * [AAC](android/document/aac/README.md)
       * [LiveData](android/document/aac/livedata.md)
+      * [MVVM vs AAC ViewModel](android/document/aac/mvvm-vs-aac-viewmodel.md)
