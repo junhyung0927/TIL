@@ -37,19 +37,17 @@ CoordinatorLayout은 다른 몇몇 레이아웃처럼, 자신에게 특화된 La
 
 중첩된 `CoordinatorLayout`을 사용하는 경우에 `Child Coordinator`의 스크롤 동작이 `Parent Coordinator`로 전파되지 않는 이슈를 해결하기 위해서 정리한다.
 
-`NestedScrollEvent` 위젯에서 발생한 scroll을 parent(NestedScrollingParent)로 전달하며, 각 위젯별로 `consumed`, `unconsumed`, `x`, `y` 값을 활용하여 `Nestedscrolling`을 구현한다.
+`NestedScrollEvent` 위젯에서 발생한 scroll을 parent(NestedScrollingParent)로 전달하며, 각 위젯별로 `consumed`, `unconsumed`, `x`, `y` 값을 활용하여 `NestedScrolling`을 구현한다.
 
-밑의 예에서, RecyclerView(NestedScrollingChild)에서 스크롤 이벤트가 발생하면 `CoordinatorLayout`으로 이벤트가 전파되며, `CoordinatorLayout`에 포함된 child layout의 behavior(AppBarLayout, RecyclerView ...)에 해당 이벤트를 전달한다.
+밑의 예에서, RecyclerView(NestedScrollingChild)에서 스크롤 이벤트가 발생하면 `CoordinatorLayout`으로 이벤트가 전파되며, `RecyclerView`에 포함된 child layout의 behavior(AppBarLayout, RecyclerView ...)에 해당 이벤트를 전달한다.
 
 ![](../../../.gitbook/assets/Untitled.png)
 
-현재 진행중인 프로젝트에서는 아래와 같은 중첩된 `CoordinatorLayout` 구조를 가지고 있다. inner Coordinator RecylcerView(NestedScrollingChild) 의 스크롤 이벤트가 발생하면 outer Coordinator에는 스크롤이 전파되지 않는 문제가 발생한다.
+현재 진행중인 프로젝트에서는 아래와 같은 중첩된 `CoordinatorLayout` 구조를 가지고 있다. inner RecylcerView(NestedScrollingChild) 의 스크롤 이벤트가 발생하면 outer Coordinator에는 스크롤이 전파되지 않는 문제가 발생한다.
 
-이러한 문제를 해결하기 위해 inner CoordinatorLayout의 필요한 내부 메서드(onInterceptTouchEvent, onNestedScroll, onNestedFling ...)들을 오버라이드하여 구현해야 한다.
+이러한 문제를 해결하기 위해 inner `RecyclerView` 에 필요한 Coordinator.behavior의 내부 메서드(onInterceptTouchEvent, onNestedScroll, onNestedFling ...)들을 오버라이드하여 구현해야 한다.&#x20;
 
 ![](<../../../.gitbook/assets/Untitled (1).png>)
-
-![](<../../../.gitbook/assets/Untitled (2).png>)
 
 ### RFC
 
