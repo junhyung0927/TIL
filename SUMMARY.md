@@ -24,6 +24,7 @@
   * [Android Test CodeLab](android/android-test-codelab/README.md)
     * [Testing Coroutines and Jetpack integrations](android/android-test-codelab/testing-coroutines-and-jetpack-integrations/README.md)
       * [Introduction to and review of testing coroutines](android/android-test-codelab/testing-coroutines-and-jetpack-integrations/introduction-to-and-review-of-testing-coroutines.md)
+      * [Coroutines and ViewModels](android/android-test-codelab/testing-coroutines-and-jetpack-integrations/coroutines-and-viewmodels.md)
   * [Document](android/document/README.md)
     * [AAC](android/document/aac/README.md)
       * [LiveData](android/document/aac/livedata.md)
