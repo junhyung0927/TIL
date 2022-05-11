@@ -27,6 +27,7 @@
       * [Coroutines and ViewModels](android/android-test-codelab/testing-coroutines-and-jetpack-integrations/coroutines-and-viewmodels.md)
       * [Testing Coroutine Timing](android/android-test-codelab/testing-coroutines-and-jetpack-integrations/testing-coroutine-timing.md)
       * [Testing Error Handling](android/android-test-codelab/testing-coroutines-and-jetpack-integrations/testing-error-handling.md)
+      * [Testing Room](android/android-test-codelab/testing-coroutines-and-jetpack-integrations/testing-room.md)
   * [Document](android/document/README.md)
     * [AAC](android/document/aac/README.md)
       * [LiveData](android/document/aac/livedata.md)
