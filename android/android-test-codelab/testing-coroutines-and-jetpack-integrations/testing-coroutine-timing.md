@@ -6,7 +6,7 @@
 
 `StatisticsViewModel` 은 모든 데이터를 저장하고 통계 화면의 모든 계산을 수행합니다.
 
-![](<../../../.gitbook/assets/Untitled (1).png>)
+![](<../../../.gitbook/assets/Untitled (1) (1).png>)
 
 ### Prepare StatisticsViewModel for testing
 

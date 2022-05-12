@@ -47,7 +47,7 @@ CoordinatorLayout은 다른 몇몇 레이아웃처럼, 자신에게 특화된 La
 
 이러한 문제를 해결하기 위해 inner `RecyclerView` 에 필요한 Coordinator.behavior의 내부 메서드(onInterceptTouchEvent, onNestedScroll, onNestedFling ...)들을 오버라이드하여 구현해야 한다.&#x20;
 
-![](<../../../.gitbook/assets/Untitled (1) (1).png>)
+![](<../../../.gitbook/assets/Untitled (1) (1) (1).png>)
 
 ### RFC
 
