@@ -173,7 +173,7 @@ fun refresh() {
 ```kotlin
 fun refresh() {
    _dataLoading.value = true
-   // PAUSES EXECUTION HERE
+?   // PAUSES EXECUTION HERE
    viewModelScope.launch {
        tasksRepository.refreshTasks()
        _dataLoading.value = false
@@ -181,15 +181,23 @@ fun refresh() {
 }
 ```
 
-`mainCoroutineRule.resumeDispatcher()` \*\*\*\*을 호출할 때, 코루틴의 모든 코드가 실행될 것입니다.
+`mainCoroutineRule.resumeDispatcher()` 을 호출할 때, 코루틴의 모든 코드가 실행될 것입니다.
 
-1. 테스트에 `pauseDispatcher` 와 `resumeDispatcher` 를 사용하도록 변경하여 코루틴을 실행하기 전에 일시 중지하고 로딩 인디케이터가 표시되는지 확인한 다음, 로딩 인디케이터가 사라졌는지 확인합니다.
+테스트에 `pauseDispatcher` 와 `resumeDispatcher` 를 사용하도록 변경하여 코루틴을 실행하기 전에 일시 중지하고 로딩 인디케이터가 표시되는지 확인한 다음, 로딩 인디케이터가 사라졌는지 확인합니다.
+
+
+
+❓`pauseDispatcher` 를 실행하면 \_dataLoading.value = true까지만 실행하고 dispatcher를 pause 상태로 바꿀까요?
+
+그 이유는 `mainCoroutineRule` 를 통해 Main 디스패처를 중지시켰기 때문입니다. viewModelScope는 Main 디스패처를 사용하기 때문에 중지했을 때 value가 true를 테스트 통과한 후 resume을 통해 value가 false일 때를 테스트합니다. 만약 Main 디스패처가 아닌 GlobalScope, IO 등으로 사용했을 때는 중지가 안되기 때문에 테스트 실패가 발생합니다.
+
+
 
 **StatisticsViewModelTest.kt**
 
 ```kotlin
 @Test
-fun loadTasks_loading() {
+fun loadTasksloading() {
     // Pause dispatcher so you can verify initial values.
     mainCoroutineRule.pauseDispatcher()
 
@@ -207,7 +215,7 @@ fun loadTasks_loading() {
 }
 ```
 
-1. 이제 테스트가 통과되는지 확인합니다.
+이제 테스트가 통과되는지 확인합니다.
 
 > 보다 자세한 타이밍 제어가 필요한 경우, TestCoroutineDispatcher에서 아래와 같은 기능을 제공합니다.
 
