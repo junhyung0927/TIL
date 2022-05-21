@@ -33,6 +33,7 @@
     * [AAC](android/document/aac/README.md)
       * [LiveData](android/document/aac/livedata.md)
       * [MVVM vs AAC ViewModel](android/document/aac/mvvm-vs-aac-viewmodel.md)
+      * [Handling Lifecycles with Lifecycle-Aware Components](android/document/aac/handling-lifecycles-with-lifecycle-aware-components.md)
   * [Issue](android/issue/README.md)
     * [중첩된 Coordinator 처리하기](android/issue/coordinator/README.md)
       * [introduce & issue](android/issue/coordinator/introduce-and-issue.md)

@@ -27,7 +27,7 @@ E2E 테스트 매우 복잡하게 작성됩니다(난이도 상승). 그래서 �
 1. Settings > Developer options
 2. Window animation scale, Transition animation scale, Animator duration scale
 
-### ![](<../../../.gitbook/assets/Untitled (3).png>)
+### ![](<../../../.gitbook/assets/Untitled (3) (1).png>)
 
 ### Create TasksActivity Test
 
