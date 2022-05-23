@@ -37,6 +37,8 @@
       * [Room](android/document/aac/room/README.md)
         * [개요](android/document/aac/room/undefined.md)
         * [Entity](android/document/aac/room/entity.md)
+        * [DAO를 사용해 데이터 접근](android/document/aac/room/dao.md)
+        * [객체 간 관계 정의](android/document/aac/room/undefined-1.md)
   * [Issue](android/issue/README.md)
     * [중첩된 Coordinator 처리하기](android/issue/coordinator/README.md)
       * [introduce & issue](android/issue/coordinator/introduce-and-issue.md)
