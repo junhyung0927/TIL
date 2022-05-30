@@ -20,6 +20,7 @@
       * [item 9](language/kotlin/effective-kotlin/item-9.md)
       * [item10](language/kotlin/effective-kotlin/item10.md)
       * [item11](readme/kotlin/effective-kotlin/item11.md)
+      * [item 46](readme-1/kotlin/effective-kotlin/item-46.md)
 * [Android](android/README.md)
   * [Android Test CodeLab](android/android-test-codelab/README.md)
     * [Testing Coroutines and Jetpack integrations](android/android-test-codelab/testing-coroutines-and-jetpack-integrations/README.md)

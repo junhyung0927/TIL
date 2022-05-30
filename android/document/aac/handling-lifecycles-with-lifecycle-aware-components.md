@@ -73,7 +73,7 @@ Lifecycle은 액티비티나 프래그먼트와 같은 컴포넌트의 생명 �
 * RESUMED: onResume()이 불린 이후에 변경
 * STARTED: onStart() 이후나, onPause() 직전에 변경
 
-![](<../../../.gitbook/assets/Untitled (3).png>)
+![](<../../../.gitbook/assets/Untitled (3) (1).png>)
 
 아래와 같이 Lifecycle 클래스의 addObserver() 메서드를 호출하고 다음과 같이 observer의 인스턴스를 전달하여 observer를 추가 할 수 있다.
 
