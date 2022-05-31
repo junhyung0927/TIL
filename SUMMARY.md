@@ -53,6 +53,8 @@
         * [Modules](android/document/android-injection/koin/modules.md)
         * [Start Koin](android/document/android-injection/koin/start-koin.md)
         * [Koin Component](android/document/android-injection/koin/koin-component.md)
+    * [Util](android/document/util/README.md)
+      * [ViewModel Event 처리](android/document/util/viewmodel-event.md)
   * [Issue](android/issue/README.md)
     * [중첩된 Coordinator 처리하기](android/issue/coordinator/README.md)
       * [introduce & issue](android/issue/coordinator/introduce-and-issue.md)
