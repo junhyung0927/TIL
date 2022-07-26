@@ -69,7 +69,7 @@ Activity 생명주기를 abstract class로 만들어서 `GlobalErrorExceptionHan
 
 다른 액티비티로 넘어갈 때, 이전 액티비티는 `Stopped` 상태가 됩니다. 이때 `activityCount` 를 감소시킵니다. 만약 `activityCount` 가 0 미만 일 때는, `lastActivity` 를 null로 설정합니다.
 
-![](<../../.gitbook/assets/Untitled (10).png>)
+![](<../../.gitbook/assets/Untitled (10) (1).png>)
 
 예를 들어봅시다. 제주로드 앱에서는 splash view → main view → detail view 의 로직을 가지고 있습니다. 아래의 그림은 main view 에서 detail view로 진입할 때 인위적으로 RuntimeException을 던지게 해봤습니다.
 
