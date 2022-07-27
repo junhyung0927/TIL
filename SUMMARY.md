@@ -30,6 +30,7 @@
 * [Android](android/README.md)
   * [Architecture](android/architecture/README.md)
     * [모바일 아키텍처 개론](android/architecture/undefined/README.md)
+      * [Mobile Clean Architecture](android/architecture/undefined/mobile-clean-architecture.md)
       * [SOLID 원칙](android/architecture/undefined/solid.md)
   * [Android Test CodeLab](android/android-test-codelab/README.md)
     * [Testing Coroutines and Jetpack integrations](android/android-test-codelab/testing-coroutines-and-jetpack-integrations/README.md)
