@@ -201,7 +201,7 @@ if (list is MutableList) {
 }
 ```
 
-![ 실행 결과](<../../../.gitbook/assets/Untitled (27).png>)
+![ 실행 결과](<../../../.gitbook/assets/Untitled (27) (1).png>)
 
 **코틀린에서 읽기 전용 컬렉션을 mutable 컬렉션으로 다운캐스팅해서는 안됩니다. 읽기 전용에서 mutable로 변경해야 한다면, copy를 통해서 새로운 mutable 컬렉션을 만드는 list.toMutableList를 활용해야 합니다.**
 

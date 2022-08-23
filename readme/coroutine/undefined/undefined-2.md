@@ -8,7 +8,7 @@
 
 코루틴의 `Job` 은 아래 표와 같이 여섯 가지 코루틴 상태를 포함하며, actvie/completed/canceled 상태에 따라 값이 변동한다.
 
-![](<../../../.gitbook/assets/Untitled (28).png>)
+![](<../../../.gitbook/assets/Untitled (28) (1).png>)
 
 이러한 `Job`을 바탕으로 코루틴의 상태를 확인할 수 있고, 제어할 수 있다. job.cancel()을 호출하게 되면 즉시 취소 상태로 `Job` 을 한다.
 

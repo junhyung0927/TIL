@@ -4,7 +4,7 @@ description: 구글에서 진행한 ViewModel에 대한 안드로이드 개발�
 
 # MVVM vs AAC ViewModel
 
-![](<../../../.gitbook/assets/Untitled (29).png>)
+![](<../../../.gitbook/assets/Untitled (29) (1).png>)
 
 ![](<../../../.gitbook/assets/Untitled (30).png>)
 
