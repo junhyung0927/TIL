@@ -35,6 +35,8 @@
     * [도메인 계층과 데이터 계층 구현](android/architecture/undefined/README.md)
       * [앱 아키텍쳐의 미드필더, 도메인 계층을 어떻게 설계할 것인가?](android/architecture/undefined/undefined.md)
     * [UI 계층](android/architecture/ui/README.md)
+      * [MVx의 대원칙](android/architecture/ui/mvx.md)
+      * [MVP, 그리고 non-MVC에서 공통적으로 고려해야할 것들](android/architecture/ui/mvp-non-mvc.md)
       * [MVVM](android/architecture/ui/mvvm.md)
     * [모바일 아키텍처 개론](android/architecture/undefined-1/README.md)
       * [SOLID 원칙](android/architecture/undefined-1/solid.md)
