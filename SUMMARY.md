@@ -27,6 +27,8 @@
       * [item10](language/kotlin/effective-kotlin/item10.md)
       * [item11](readme/kotlin/effective-kotlin/item11.md)
       * [item 46](readme-1/kotlin/effective-kotlin/item-46.md)
+    * [Kotlin in Action](readme-1/kotlin/kotlin-in-action/README.md)
+      * [람다로 프로그래밍](readme-1/kotlin/kotlin-in-action/undefined.md)
 * [Android](android/README.md)
   * [Dependency Injection](android/dependency-injection/README.md)
     * [Dagger의 기초와 중요 개념](android/dependency-injection/dagger.md)
